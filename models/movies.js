@@ -1,4 +1,5 @@
 'use strict';
+var mongoose = require('mongoose');
 
 var moviesModel = function(){
     //defining a new schema
