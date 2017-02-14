@@ -7,11 +7,18 @@ module.exports = function (router) {
 
     var model = new Movie();
 
+    //Movielistings Route
     router.get('/', function (req, res) {
-
-
-        res.render('movies', model);
-
+        //get all movies
+        Movie.find({}, function(err, docs){
+           if(err){
+               res.send(err);
+           } else {
+               res.render('movies', {
+                   movies: docs
+               });
+           }
+        });
 
     });
 
