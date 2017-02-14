@@ -1,0 +1,18 @@
+{
+  "name": "moviebase",
+  "description": "Movie listings site",
+  "main": "index.js",
+  "author": "PC",
+  "moduleType": [
+    "amd"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ]
+}
