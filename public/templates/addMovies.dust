@@ -3,7 +3,8 @@
 {<body}
     <div class = row>
         <a href='/movies'>Go Back</a>
-        <form>
+        <h2>Add Movie</h2>
+        <form method="post" action="/movies/add">
             <div>
                 <label>Title*
                     <input type="text" name="title" placeholder="Add a title">
@@ -45,7 +46,7 @@
             <div>
                 <input type="submit" value="Submit" class="button">
             </div>
-            <input type="hidden" value="{_csrf}" name="_csrf"
+            <input type="hidden" name="_csrf" value="{_csrf}">
         </form>
     </div>
 {/body}

@@ -27,4 +27,17 @@ module.exports = function (router) {
        res.render('addMovies');
     });
 
+    //Add Moive POST
+    router.post('/add', function(req, res){
+        req.checkBody('title', 'Title is a required field').notEmpty();
+
+        var errors = req.validationErrors();
+
+        if(errors){
+            console.log("Error");
+        } else {
+            console.log('No error');
+        }
+    });
+
 };
