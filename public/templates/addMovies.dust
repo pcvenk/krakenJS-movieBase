@@ -17,13 +17,13 @@
             <div>
                 <label>Genre
                     <select>
-                        <options value="drama">Drama</options>
-                        <options value="action">Action</options>
-                        <options value="comedy">Comedy</options>
-                        <options value="documentary">Documentary</options>
-                        <options value="horror">Horror</options>
-                        <options value="adventure">Adventure</options>
-                        <options value="other">Other</options>
+                        <option value="drama">Drama</option>
+                        <option value="action">Action</option>
+                        <option value="comedy">Comedy</option>
+                        <option value="documentary">Documentary</option>
+                        <option value="horror">Horror</option>
+                        <option value="adventure">Adventure</option>
+                        <option value="other">Other</option>
                     </select>
                 </label>
             </div>
