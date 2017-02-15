@@ -22,4 +22,9 @@ module.exports = function (router) {
 
     });
 
+    //Add Movie
+    router.get('/add', function(req, res){
+       res.render('addMovies');
+    });
+
 };

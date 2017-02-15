@@ -17,7 +17,7 @@ options = {
          * Add any additional config setup or overrides here. `config` is an initialized
          * `confit` (https://github.com/krakenjs/confit/) configuration object.
          */
-        db.config(config.get('databaseConfig'));
+        db.config(config.get('dbConfig'));
         next(null, config);
     }
 };
