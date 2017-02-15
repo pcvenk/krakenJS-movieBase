@@ -29,6 +29,11 @@
                 </label>
             </div>
             <div>
+                <label>Director
+                    <input type="text" name="director" placeholder="Director">
+                </label>
+            </div>
+            <div>
                 <label>Plot
                     <textarea name="plot" placeholder="plot"></textarea>
                 </label>

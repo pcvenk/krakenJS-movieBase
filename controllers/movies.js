@@ -27,7 +27,7 @@ module.exports = function (router) {
        res.render('addMovies');
     });
 
-    //Add Moive POST
+    //Add Movie POST
     router.post('/add', function(req, res){
         //checking if the required field has been input
         req.checkBody('title', 'Title is a required field').notEmpty();
@@ -39,7 +39,30 @@ module.exports = function (router) {
                 errors: errors
             });
         } else {
-            console.log('No error');
+            var title = req.body.title && req.body.title.trim();
+            var releaseDate = req.body.releaseDate && req.body.releaseDate.trim();
+            var genre = req.body.genre && req.body.genre.trim();
+            var director = req.body.director && req.body.director.trim();
+            var plot = req.body.plot && req.body.plot.trim();
+            var cover = req.body.cover && req.body.cover.trim();
+            var trailer = req.body.trailer && req.body.trailer.trim();
+
+            var newMovie = new Movie({
+                title: title,
+                releaseDate: releaseDate,
+                genre: genre,
+                director: director,
+                plot: plot,
+                cover: cover,
+                trailer: trailer
+            });
+
+            newMovie.save(function(err){
+                if(err){
+                    res.send(err)
+                }
+                res.redirect('/movies')
+            })
         }
     });
 
