@@ -29,12 +29,15 @@ module.exports = function (router) {
 
     //Add Moive POST
     router.post('/add', function(req, res){
+        //checking if the required field has been input
         req.checkBody('title', 'Title is a required field').notEmpty();
 
         var errors = req.validationErrors();
 
         if(errors){
-            console.log("Error");
+            res.render('addMovies', {
+                errors: errors
+            });
         } else {
             console.log('No error');
         }
