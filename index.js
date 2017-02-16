@@ -3,6 +3,8 @@
 var express = require('express');
 var kraken = require('kraken-js');
 var expressValidator = require('express-validator');
+var session = require('express-session');
+var lusca = require('lusca');
 var db = require('./lib/db');
 
 
