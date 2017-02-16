@@ -2,10 +2,10 @@
 
 {<body}
     {#movies}
-        <div class="medium-4 columns end">
+        <div class="medium-4 columns end text-center">
             <img src={.cover}>
-            <h3>{.title}</h3>
-            <a href='/movies/details/{._id}' class=button>Info</a>
+            <h6>{.title}</h6>
+            <a href='/movies/details/{._id}' class="button tiny">Info</a>
         </div>
     {:else}
         <p>No Movies in the Database!</p>

@@ -26,3 +26,11 @@ header {
 .button {
   background: #f15500 !important;
 }
+/* line 26, css/app */
+.add-movie {
+  margin-top: 20px;
+}
+/* line 30, css/app */
+.brand {
+  padding-top: 10px !important;
+}
