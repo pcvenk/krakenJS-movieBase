@@ -69,4 +69,19 @@ module.exports = function (router) {
         }
     });
 
+    //Details Route
+    app.get('details/:id', function(req, res){
+        var id = req.params.id;
+
+        Movie.findOne({_id: id}, function(err, movie){
+            if(err){
+                console.log(err);
+            } else {
+                res.render('details', {
+                   movie: movie
+                })
+            }
+        });
+    });
+
 };
