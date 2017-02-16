@@ -9,6 +9,16 @@
 
     </head>
     <body>
+        <header>
+            <div class="row">
+                <div class="columns medium-8">
+                    <h1><a href="/movies">MovieBase</a></h1>
+                </div>
+                <div class="columns medium-4">
+                    <a href="/movies/add" class="button right">Add Movie</a>
+                </div>
+            </div>
+        </header>
 
         <div id="wrapper">
             {#errors}

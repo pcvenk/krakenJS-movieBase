@@ -2,7 +2,7 @@
 
 {<body}
     {#movies}
-        <div>
+        <div class="medium-4 columns end">
             <img src={.cover}>
             <h3>{.title}</h3>
             <a href='/movies/details/{._id}' class=button>Info</a>
