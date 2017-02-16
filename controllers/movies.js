@@ -39,6 +39,8 @@ module.exports = function (router) {
                 errors: errors
             });
         } else {
+
+            //Retrieving values from the form
             var title = req.body.title && req.body.title.trim();
             var releaseDate = req.body.releaseDate && req.body.releaseDate.trim();
             var genre = req.body.genre && req.body.genre.trim();
@@ -57,6 +59,7 @@ module.exports = function (router) {
                 trailer: trailer
             });
 
+            //Saving a new movie
             newMovie.save(function(err){
                 if(err){
                     res.send(err)
