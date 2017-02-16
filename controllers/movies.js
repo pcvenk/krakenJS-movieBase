@@ -70,7 +70,7 @@ module.exports = function (router) {
     });
 
     //Details Route
-    app.get('details/:id', function(req, res){
+    router.get('details/:id', function(req, res){
         var id = req.params.id;
 
         Movie.findOne({_id: id}, function(err, movie){
