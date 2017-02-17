@@ -87,6 +87,7 @@ module.exports = function (router) {
     // Delete Route
     router.delete('/delete/:id', function(req, res){
         var id = req.params.id;
+        //pass in the query
         Movie.remove({_id: id}, function(err){
             if(err){
                 res.send(err);
