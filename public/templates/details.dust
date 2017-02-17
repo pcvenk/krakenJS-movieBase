@@ -34,7 +34,7 @@
     </div>
     <hr>
     <a href="/movies/edit/{movie._id}"
-       class="details">Edit Movie  |
+       class="details">Edit Movie |
     </a>
     <a href="#" class="delete-movie"
                 data-movie-id="{movie._id}"
