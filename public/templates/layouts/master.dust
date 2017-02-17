@@ -10,7 +10,7 @@
     </head>
     <body>
         <header>
-            <div class="row">
+            <div class="row brand">
                 <div class="columns medium-8">
                     <h1 class="brand"><a href="/movies">MovieBase</a></h1>
                 </div>

@@ -34,3 +34,7 @@ header {
 .brand {
   padding-top: 10px !important;
 }
+/* line 34, css/app */
+.details {
+  padding-left: 30px;
+}

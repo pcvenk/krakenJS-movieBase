@@ -18,7 +18,7 @@
         <div>
           <label> Genre *
             <select name="genre">
-                <option value="Action">Action</option>
+                  <option value="Action">Action</option>
                   <option value="Comedy">Comedy</option>
                   <option value="Drama">Drama</option>
                   <option value="Documentary">Documentary</option>
