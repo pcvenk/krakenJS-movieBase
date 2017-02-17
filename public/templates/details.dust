@@ -3,16 +3,17 @@
 {<body}
     <div class="row details">
         <a href="/movies">Go Back</a>
+        <br>
         <h2>{movie.title}</h2>
 
         <div class="columns medium-4">
-            <img src="{movie.cover}"
+          <img class="th" src="{movie.cover}">
         </div>
 
         <div class="columns medium-8">
             <ul class="side-nav">
-                <li><strong>Genre:</strong> {movie.genre}</li>
-                <li><strong>Release Date:</strong> {movie.releaseDate}</li>
+                <li><strong>Genre: </strong>{movie.genre}</li>
+                <li><strong>Release Date: </strong>{movie.releaseDate}</li>
             </ul>
         </div>
     </div>

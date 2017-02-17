@@ -12,11 +12,11 @@
         </div>
         <div>
           <label> Release Date
-            <input type="date" name="release_date">
+            <input type="date" name="releaseDate">
           </label>
         </div>
         <div>
-          <label> Genre *
+          <label> Genre
             <select name="genre">
                   <option value="Action">Action</option>
                   <option value="Comedy">Comedy</option>
