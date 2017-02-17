@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ff96134c-9bf2-4920-84ac-7f4ee084febd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/templates/addMovies.dust" afterPath="$PROJECT_DIR$/public/templates/addMovies.dust" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/templates/details.dust" afterPath="$PROJECT_DIR$/public/templates/details.dust" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/templates/layouts/master.dust" afterPath="$PROJECT_DIR$/public/templates/layouts/master.dust" />
     </list>
     <ignored path="movieBase.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,8 +39,8 @@
       <file leaf-file-name="details.dust" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/templates/details.dust">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+            <state relative-caret-position="316">
+              <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -434,12 +432,12 @@
       <updated>1487090245811</updated>
       <workItem from="1487090247008" duration="4012000" />
       <workItem from="1487170542676" duration="4578000" />
-      <workItem from="1487261520810" duration="11429000" />
+      <workItem from="1487261520810" duration="11542000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20019000" />
+    <option name="totallyTimeSpent" value="20132000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="582" y="23" width="858" height="873" extended-state="0" />
@@ -786,8 +784,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/templates/details.dust">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+        <state relative-caret-position="316">
+          <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
           <folding />
         </state>
       </provider>
