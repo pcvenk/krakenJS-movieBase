@@ -84,4 +84,14 @@ module.exports = function (router) {
         });
     });
 
+    // Delete Route
+    router.delete('/delete/:id', function(req, res){
+        var id = req.params.id;
+        Movie.remove({_id: id}, function(err){
+            if(err){
+                res.send(err);
+            }
+            res.status(204).send();
+        });
+    });
 };
