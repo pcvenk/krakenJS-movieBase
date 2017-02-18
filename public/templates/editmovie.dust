@@ -12,10 +12,7 @@
         </div>
         <div>
           <label> Release Date
-            <input type="date" name="releaseDate">
-          </label>
-        </div>
-        <div>
+            <input type="date" name="releaseDate" id="releaseDate"
           <label> Genre
             <select name="genre">
                   <option value="Action">Action</option>
@@ -54,4 +51,19 @@
         <input type="hidden" name="_csrf" value="{_csrf}">
       </form>
     </div>
+
+    <div class="hide" id="grabDate">{movie.releaseDate}</div>
+
+    <script>
+        var releaseDate = document.getElementById('grabDate').innerHTML;
+
+        Date.prototype.toDateInputValue = (function() {
+           var local = new Date(releaseDate);
+           local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+           return local.toJSON().slice(0,10);
+         });
+
+         document.getElementById('releaseDate').value =  new Date().toDateInputValue();
+    </script>
+
 {/body}
