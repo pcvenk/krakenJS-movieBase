@@ -98,7 +98,7 @@ module.exports = function (router) {
 
     //Edit Route
     router.get('/edit/:id', function(req, res){
-        var id = req.body.id;
+        var id = req.params.id;
 
         Movie.findOne({_id: id}, function(err, movie){
             if(err){
