@@ -27,7 +27,10 @@
             {+body /}
         </div>
 
+
+        <script data-main="/js/app" src="/components/requirejs/require.js"></script>
         <script src="/components/jquery/dist/jquery.min.js"></script>
         <script src=/components/foundation/js/foundation.js"></script>
+
     </body>
 </html>

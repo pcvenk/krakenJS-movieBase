@@ -95,4 +95,19 @@ module.exports = function (router) {
             res.status(204).send();
         });
     });
+
+    //Edit Route
+    router.get('/edit/:id', function(req, res){
+        var id = req.body.id;
+
+        Movie.findOne({_id: id}, function(err, movie){
+            if(err){
+                res.send(err);
+            } else {
+                res.render('editmovie', {
+                    movie: movie
+                });
+            }
+        });
+    });
 };
