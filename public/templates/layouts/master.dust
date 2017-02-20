@@ -22,17 +22,32 @@
 
         <div class="row">
             <div class="columns medium-4">
-                <form method="get" action="/movies/search">
-                    <input type="hidden" name="_csrf" value="{_csrf}">
-                    <div class="row">
-                        <div class="columns medium-10">
-                            <input type="text" name="searchMovies" placeholder="Search Movies">
+                   <form method="get" action="/movies/search">
+                        <input type="hidden" name="_csrf" value="{_csrf}">
+                        <div class="row">
+                            <div class="columns medium-10">
+                                <input type="text" name="searchMovies" placeholder="Search Movies">
+                            </div>
+                            <div class="columns medium-2">
+                                <button class="button tiny orange">Go</button>
+                            </div>
                         </div>
-                        <div class="columns medium-2">
-                            <button class="button tiny">Go</button>
-                        </div>
-                    </div>
-                </form>
+                    </form>
+            </div>
+
+            <div class="columns medium-12">
+                <div class="side-nav-wrap">
+                    <h5>Movie Genres</h3>
+                    <ul class="side-nav">
+                        <li><a href="/movies/genre/Action">Action</a></li>
+                        <li><a href="/movies/genre/Comedy">Comedy</a></li>
+                        <li><a href="/movies/genre/Drama">Drama</a></li>
+                        <li><a href="/movies/genre/Documentary">Documentary</a></li>
+                        <li><a href="/movies/genre/Horror">Horror</a></li>
+                        <li><a href="/movies/genre/Thriller">Thriller</a></li>
+                        <li><a href="/movies/genre/Other">Other</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
