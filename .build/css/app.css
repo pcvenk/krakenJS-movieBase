@@ -43,19 +43,18 @@ header {
   background: #1a1a1a;
   padding: 15px;
   display: inline-block;
-  float: left;
   margin-bottom: 30px;
 }
-/* line 46, css/app */
-.side-nav a {
+/* line 45, css/app */
+.side-nav-display a {
   border-bottom: 1px #ccc solid;
   color: #ffffff !important;
 }
-/* line 51, css/app */
-.side-nav li a:not(.button) {
+/* line 50, css/app */
+.side-nav-display li a:not(.button) {
   color: #fff !important;
 }
-/* line 55, css/app */
-.side-nav li {
+/* line 54, css/app */
+.side-nav-display li {
   display: inline-block;
 }
