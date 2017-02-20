@@ -116,22 +116,21 @@ module.exports = function (router) {
         //checking if the required field has been input
         req.checkBody('title', 'Title is a required field').notEmpty();
 
+        var id = req.params.id;
         var errors = req.validationErrors();
 
         if(errors){
-            var id = req.params.id;
-            Movie.findOne({_id: id}, function(req, res){
-                if(err){
+            Movie.findOne({_id: id}, function(err, movie){
+                if(err) {
                     res.send(err);
                 } else {
-                    res.render('/editmovie', {
+                    res.render('editmovie', {
                         errors: errors,
                         movie: movie
                     });
                 }
             })
         } else {
-
             //Retrieving values from the form
             var title = req.body.title && req.body.title.trim();
             var releaseDate = req.body.releaseDate && req.body.releaseDate.trim();
@@ -151,8 +150,7 @@ module.exports = function (router) {
                 trailer: trailer
             };
 
-            //Saving a new movie
-            var id = req.params.id;
+            //Saving the edited movie
             Movie.update({_id: id}, updateMovie, function(err){
                 if(err){
                     res.send(err)
