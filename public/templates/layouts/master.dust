@@ -11,20 +11,38 @@
     <body>
         <header>
             <div class="row brand">
-                <div class="medium-8 columns">
+                <div class="columns medium-8">
                     <h1 class="brand"><a href="/movies">MovieBase</a></h1>
                 </div>
-                <div class="medium-4 columns">
+                <div class="columns medium-4">
                     <a href="/movies/add" class="button right add-movie">Add Movie</a>
                 </div>
             </div>
         </header>
 
-        <div id="wrapper">
-            {#errors}
-                <div class="alert alert-box">{.msg}</div>
-            {/errors}
-            {+body /}
+        <div class="row">
+            <div class="columns medium-4">
+                <form method="get" action="/movies/search">
+                    <input type="hidden" name="_csrf" value="{_csrf}">
+                    <div class="row">
+                        <div class="columns medium-10">
+                            <input type="text" name="searchMovies" placeholder="Search Movies">
+                        </div>
+                        <div class="columns medium-2">
+                            <button class="button tiny">Go</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="columns medium-12">
+                {#errors}
+                    <div class="alert alert-box">{.msg}</div>
+                {/errors}
+                {+body /}
+            </div>
         </div>
 
 

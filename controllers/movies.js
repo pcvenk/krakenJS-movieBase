@@ -113,7 +113,7 @@ module.exports = function (router) {
 
     //Update Route
     router.post('/edit/:id', function(req, res){
-        //checking if the required field has been input
+        //checking if the required field has been input(express-validator)
         req.checkBody('title', 'Title is a required field').notEmpty();
 
         var id = req.params.id;
