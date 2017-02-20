@@ -111,5 +111,54 @@ module.exports = function (router) {
         });
     });
 
-    //todo Edit Post route to be added
+    //Update Route
+    router.post('/edit/:id', function(req, res){
+        //checking if the required field has been input
+        req.checkBody('title', 'Title is a required field').notEmpty();
+
+        var errors = req.validationErrors();
+
+        if(errors){
+            var id = req.params.id;
+            Movie.findOne({_id: id}, function(req, res){
+                if(err){
+                    res.send(err);
+                } else {
+                    res.render('/editmovie', {
+                        errors: errors,
+                        movie: movie
+                    });
+                }
+            })
+        } else {
+
+            //Retrieving values from the form
+            var title = req.body.title && req.body.title.trim();
+            var releaseDate = req.body.releaseDate && req.body.releaseDate.trim();
+            var genre = req.body.genre && req.body.genre.trim();
+            var director = req.body.director && req.body.director.trim();
+            var plot = req.body.plot && req.body.plot.trim();
+            var cover = req.body.cover && req.body.cover.trim();
+            var trailer = req.body.trailer && req.body.trailer.trim();
+
+            var updateMovie = {
+                title: title,
+                releaseDate: releaseDate,
+                genre: genre,
+                director: director,
+                plot: plot,
+                cover: cover,
+                trailer: trailer
+            };
+
+            //Saving a new movie
+            var id = req.params.id;
+            Movie.update({_id: id}, updateMovie, function(err){
+                if(err){
+                    res.send(err)
+                }
+                res.redirect('/movies')
+            })
+        }
+    });
 };
