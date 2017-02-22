@@ -160,4 +160,30 @@ module.exports = function (router) {
             })
         }
     });
+
+    //Search Movies
+    router.post('/search', function(req, res){
+        Movie.search(req.body.searchMovies,
+            {title: 1, plot: 1, cover: 1},
+            {
+                conditions: {
+                    title: {$exists: true},
+                    plot: {$exists: true},
+                    cover: {$exists: true}
+                },
+                sort: {title: 1},
+                limit: 10
+            },
+            function(err, movies){
+                if(err){
+                    res.send(err);
+                } else {
+                    var result =  {
+                        movies: movies.result
+                    };
+
+                    res.render('movies', result);
+                }
+        });
+    });
 };
