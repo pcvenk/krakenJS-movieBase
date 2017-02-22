@@ -179,7 +179,7 @@ module.exports = function (router) {
                     res.send(err);
                 } else {
                     var result =  {
-                        movies: movies.result
+                        movies: movies.results
                     };
 
                     res.render('movies', result);
