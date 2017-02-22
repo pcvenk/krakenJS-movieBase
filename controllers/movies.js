@@ -186,4 +186,18 @@ module.exports = function (router) {
                 }
         });
     });
+
+    //Filter Genre Route
+    router.get('/genre/:genre', function(req, res){
+        Movie.find({genre: req.params.genre}, function(err, films){
+            if(err){
+                res.send(err);
+            } else {
+                var model = {
+                    movies: films
+                };
+                res.render('movies', model);
+            }
+        });
+    });
 };
