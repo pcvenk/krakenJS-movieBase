@@ -23,6 +23,7 @@
     "lusca": "^1.4.1",
     "makara": "^2.0.3",
     "mongoose": "^4.8.2",
+    "mongoose-search-plugin": "^0.1.2",
     "requirejs": "^2.3.2"
   },
   "devDependencies": {
